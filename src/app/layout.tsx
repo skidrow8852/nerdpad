@@ -18,9 +18,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Nerd Pad",
-  description: "Share and run code snippets",
+  title: "Nerd Pad - Run and Share Code Instantly",
+  description: "Nerd Pad is your go-to platform for sharing, running, and collaborating on code snippets effortlessly. Perfect for developers, teams, and coding enthusiasts.",
 };
+
 
 export default function RootLayout({
   children,
