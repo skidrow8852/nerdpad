@@ -58,7 +58,7 @@ function SnippetCard({ snippet }: { snippet: Snippet }) {
                    group-hover:to-purple-500/20 transition-all duration-500"
                   >
                     <Image
-                      src={`/${snippet.language}.png`}
+                      src={`/assets/${snippet.language}.png`}
                       alt={`${snippet.language} logo`}
                       className="w-6 h-6 object-contain relative z-10"
                       width={24}
