@@ -2,13 +2,14 @@ import { httpRouter } from "convex/server"
 import { httpAction } from "./_generated/server";
 import { Webhook } from "svix";
 import { WebhookEvent } from "@clerk/nextjs/server";
+import { api } from "./_generated/api";
 
 const http = httpRouter();
 
 http.route({
     path : "/clerk-webhook",
     method : "POST",
-    handler : httpAction(async (ctx, request) => {
+    handler : httpAction(async (ctx , request)=> {
         const webhookSecret = process.env.CLERK_WEBHOOK_SECRET;
         if(!webhookSecret){
             throw new Error("Missing Clerk  webhook secret env varible");
@@ -49,8 +50,9 @@ http.route({
             const name = `${first_name || ""} ${last_name || ""}`.trim();
 
             try{
-
+               await ctx.runMutation(api.users.syncUser, {userId : id, email, name})
             }catch(err){
+                console.log(err)
                 return new Response("Error creating user", {status : 500});
             }
 
