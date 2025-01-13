@@ -7,7 +7,7 @@ interface CommentProps {
     _id: Id<"snippetComments">;
     _creationTime: number;
     userId: string;
-    userName: string;
+    username: string;
     snippetId: Id<"snippets">;
     content: string;
   };
@@ -25,7 +25,7 @@ function Comment({ comment, currentUserId, isDeleting, onDelete }: CommentProps)
               <UserIcon className="w-4 h-4 text-[#808086]" />
             </div>
             <div className="min-w-0">
-              <span className="block text-[#e1e1e3] font-medium truncate">{comment.userName}</span>
+              <span className="block text-[#e1e1e3] font-medium truncate">{comment.username}</span>
               <span className="block text-sm text-[#808086]">
                 {new Date(comment._creationTime).toLocaleDateString()}
               </span>
