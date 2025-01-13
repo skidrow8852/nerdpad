@@ -39,8 +39,7 @@ http.route({
         "svix-signature": svix_signature,
       }) as WebhookEvent;
     } catch (err) {
-      console.error("Error verifying webhook:", err);
-      return new Response("Error occurred", { status: 400 });
+      return new Response(`Error occurred ${err} `, { status: 400 });
     }
 
     const eventType = evt.type;
