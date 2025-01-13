@@ -1,5 +1,7 @@
+
 import { Monaco } from "@monaco-editor/react";
 import { Theme } from "../../../types";
+import * as monaco from 'monaco-editor';
 
 type LanguageConfig = Record<
   string,
@@ -336,6 +338,8 @@ print("Sum of numbers: \\(sum)")`,
   },
 };
 
+
+
 export const THEMES: Theme[] = [
   { id: "vs-dark", label: "VS Dark", color: "#1e1e1e" },
   { id: "vs-light", label: "VS Light", color: "#ffffff" },
@@ -343,6 +347,8 @@ export const THEMES: Theme[] = [
   { id: "monokai", label: "Monokai", color: "#272822" },
   { id: "solarized-dark", label: "Solarized Dark", color: "#002b36" },
 ];
+
+
 
 export const THEME_DEFINITONS = {
   "github-dark": {
@@ -422,8 +428,9 @@ export const THEME_DEFINITONS = {
 // Helper function to define themes in Monaco
 export const defineMonacoThemes = (monaco: Monaco) => {
   Object.entries(THEME_DEFINITONS).forEach(([themeName, themeData]) => {
+
     monaco.editor.defineTheme(themeName, {
-      base: themeData.base,
+      base: themeData.base as monaco.editor.BuiltinTheme , 
       inherit: themeData.inherit,
       rules: themeData.rules.map((rule) => ({
         ...rule,
