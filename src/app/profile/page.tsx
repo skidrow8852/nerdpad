@@ -9,7 +9,6 @@ import ProfileHeader from "./_components/ProfileHeader";
 import ProfileHeaderSkeleton from "./_components/ProfileHeaderSkeleton";
 import { ChevronRight, Clock, Code, ListVideo, Loader2, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import StarButton from "@/components/StarButton";
 import CodeBlock from "./_components/CodeBlock";
@@ -128,8 +127,8 @@ function ProfilePage() {
                         <div className="flex items-center gap-4">
                           <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-20 group-hover:opacity-30 transition-opacity" />
-                            <Image
-                              src={"/" + execution.language + ".png"}
+                            <img
+                              src={"/assets/" + execution.language + ".png"}
                               alt=""
                               className="rounded-lg relative z-10 object-cover"
                               width={40}
@@ -231,8 +230,8 @@ function ProfilePage() {
                               <div className="flex items-center gap-3">
                                 <div className="relative">
                                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-20 group-hover:opacity-30 transition-opacity" />
-                                  <Image
-                                    src={`/${snippet.language}.png`}
+                                  <img
+                                    src={`/assets/${snippet.language}.png`}
                                     alt={`${snippet.language} logo`}
                                     className="relative z-10"
                                     width={40}
