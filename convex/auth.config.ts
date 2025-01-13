@@ -3,7 +3,7 @@
 export default {
   providers: [
     {
-      domain: "https://literate-reindeer-1.clerk.accounts.dev",
+      domain: "https://clerk.nerdpad.pro",
       applicationID: "convex",
     },
   ]
