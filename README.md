@@ -21,6 +21,7 @@ A powerful, community-driven online code editor with a seamless, customizable, a
 
 - **Frontend:** Next.js 15 with TypeScript and TailwindCSS
 - **Backend:** Convex  
+- **State Management:** Zustand
 - **Authentication:** Clerk  
 
 
