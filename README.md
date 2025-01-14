@@ -19,7 +19,7 @@ A powerful, community-driven online code editor with a seamless, customizable, a
 
 ## 🛠️ Tech Stack  
 
-- **Frontend:** Next.js 15 with TypeScript  
+- **Frontend:** Next.js 15 with TypeScript and TailwindCSS
 - **Backend:** Convex  
 - **Authentication:** Clerk  
 
