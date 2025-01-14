@@ -20,7 +20,7 @@ export const LANGUAGE_CONFIG: LanguageConfig = {
     id: "javascript",
     label: "JavaScript",
     logoPath: "/assets/javascript.png",
-    pistonRuntime: { language: "javascript", version: "18.15.0" }, // api that we're gonna be using
+    pistonRuntime: { language: "javascript", version: "18.15.0" }, 
     monacoLanguage: "javascript",
     defaultCode: `// JavaScript Playground
 const numbers = [1, 2, 3, 4, 5];
@@ -213,6 +213,34 @@ func main() {
     println!("Sum of numbers: {}", sum);
 }`,
   },
+
+  c: {
+    id: "c",
+    label: "C",
+    logoPath: "/assets/c.png",
+    pistonRuntime: { language: "c", version: "10.2.0" },
+    monacoLanguage: "c",
+    defaultCode: `#include <stdio.h>
+
+#define PI 3.14159
+
+int main() {
+    float radius, area;
+
+    // Prompt the user to enter the radius
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+
+    // Calculate the area of the circle
+    area = PI * radius * radius;
+
+    // Display the result
+    printf("The area of the circle with radius %.2f is: %.2f\n", radius, area);
+
+    return 0;
+}
+`,
+  },
   cpp: {
     id: "cpp",
     label: "C++",
@@ -335,6 +363,120 @@ print("Even numbers: \\(evenNumbers)")
 // Calculate sum
 let sum = numbers.reduce(0, +)
 print("Sum of numbers: \\(sum)")`,
+  },
+
+  php: {
+    id: "php",
+    label: "Php",
+    logoPath: "/assets/php.png",
+    pistonRuntime: { language: "php", version: "8.2.3" },
+    monacoLanguage: "php",
+    defaultCode: `<?php
+// Define the value of PI
+define("PI", 3.14159);
+
+// Prompt the user to enter the radius
+echo "Enter the radius of the circle: ";
+$radius = trim(fgets(STDIN));
+
+// Validate the input
+if (is_numeric($radius) && $radius > 0) {
+    // Calculate the area of the circle
+    $area = PI * $radius * $radius;
+
+    // Display the result
+    echo "The area of the circle with radius " . number_format($radius, 2) . " is: " . number_format($area, 2) . "\n";
+} else {
+    echo "Please enter a valid positive number for the radius.\n";
+}
+?>
+`,
+  },
+
+
+  perl: {
+    id: "perl",
+    label: "Perl",
+    logoPath: "/assets/perl.png",
+    pistonRuntime: { language: "perl", version: "5.36.0" },
+    monacoLanguage: "perl",
+    defaultCode: `#!/usr/bin/perl
+use strict;
+use warnings;
+
+# Define the value of PI
+use constant PI => 3.14159;
+
+# Prompt the user to enter the radius
+print "Enter the radius of the circle: ";
+my $radius = <STDIN>;
+chomp($radius);  # Remove newline character
+
+# Validate the input
+if ($radius =~ /^[0-9]+(\.[0-9]+)?$/ && $radius > 0) {
+    # Calculate the area of the circle
+    my $area = PI * $radius * $radius;
+
+    # Display the result
+    printf "The area of the circle with radius %.2f is: %.2f\n", $radius, $area;
+} else {
+    print "Please enter a valid positive number for the radius.\n";
+}
+
+`,
+  },
+  lua: {
+    id: "lua",
+    label: "Lua",
+    logoPath: "/assets/lua.png",
+    pistonRuntime: { language: "lua", version: "5.4.4" },
+    monacoLanguage: "lua",
+    defaultCode: `-- Define the value of PI
+local PI = 3.14159
+
+-- Prompt the user to enter the radius
+io.write("Enter the radius of the circle: ")
+local radius = io.read("*n") -- Read a number input
+
+-- Validate the input
+if radius and radius > 0 then
+    -- Calculate the area of the circle
+    local area = PI * radius * radius
+
+    -- Display the result
+    print(string.format("The area of the circle with radius %.2f is: %.2f", radius, area))
+else
+    print("Please enter a valid positive number for the radius.")
+end
+
+`,
+  },
+  bash: {
+    id: "bash",
+    label: "Bash",
+    logoPath: "/assets/bash.png",
+    pistonRuntime: { language: "bash", version: "5.2.0" },
+    monacoLanguage: "bash",
+    defaultCode: `#!/bin/bash
+
+# Define the value of PI
+PI=3.14159
+
+# Prompt the user to enter the radius
+read -p "Enter the radius of the circle: " radius
+
+# Validate the input (check if it's a positive number)
+if [[ $radius =~ ^[0-9]+(\.[0-9]+)?$ ]] && (( $(echo "$radius > 0" | bc -l) )); then
+    # Calculate the area of the circle
+    area=$(echo "$PI * $radius * $radius" | bc -l)
+    # Display the result
+    printf "The area of the circle with radius %.2f is: %.2f\n" "$radius" "$area"
+else
+    echo "Please enter a valid positive number for the radius."
+fi
+
+
+`,
   },
 };
 

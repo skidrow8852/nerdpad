@@ -8,7 +8,7 @@ A powerful, community-driven online code editor with a seamless, customizable, a
 ## Features  
 
 - **Tech Stack:** Built using Next.js 15, Convex, Clerk, and TypeScript for high performance and scalability.  
-- **Multi-Language Support:** Code in 10 different programming languages within a single platform.  
+- **Multi-Language Support:** Code in 15 different programming languages within a single platform.  
 - **Customizable Themes:** Personalize your coding environment with 5 stunning VSCode-inspired themes.  
 - **Smart Output Handling:** Receive intuitive feedback with success and error state outputs.  
 - **Community-Driven Sharing:** Collaborate and share your code with other users effortlessly.  
