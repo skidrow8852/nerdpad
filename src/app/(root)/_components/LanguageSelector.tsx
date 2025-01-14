@@ -62,7 +62,7 @@ function LanguageSelector() {
           />
         </div>
 
-        <span className="text-gray-200 min-w-[80px] text-left group-hover:text-white transition-colors">
+        <span className="max-sm:hidden text-gray-200 min-w-[80px] text-left group-hover:text-white transition-colors">
           {currentLanguageObj.label}
         </span>
 
