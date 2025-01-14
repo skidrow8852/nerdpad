@@ -51,19 +51,29 @@ function EditorPanel() {
     <div className="relative">
       <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] p-6">
         {/* Header */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
+        <div className="flex max-sm:grid items-center justify-between mb-4">
+          <div className="flex items-center gap-3 max-sm:mb-4">
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#1e1e2e] ring-1 ring-white/5">
               <Image src={"/assets/" + language + ".png"} alt="Logo" width={24} height={24} />
             </div>
-            <div>
+            <div >
               <h2 className="text-sm font-medium text-white">Code Editor</h2>
               <p className="text-xs text-gray-500">Write and execute your code</p>
             </div>
+
+             <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleRefresh}
+              className="hidden max-sm:block  ml-6 p-2 bg-[#1e1e2e] hover:bg-[#2a2a3a] rounded-lg ring-1 ring-white/5 transition-colors"
+              aria-label="Reset to default code"
+            >
+              <RotateCcwIcon className="size-4 text-gray-400" />
+            </motion.button>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3  max-sm:w-full">
             {/* Font Size Slider */}
-            <div className="flex items-center gap-3 px-3 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-white/5">
+            <div className="flex items-center gap-3 max-sm:gap-6 px-3 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-white/5">
               <TypeIcon className="size-4 text-gray-400" />
               <div className="flex items-center gap-3">
                 <input
@@ -84,7 +94,7 @@ function EditorPanel() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleRefresh}
-              className="p-2 bg-[#1e1e2e] hover:bg-[#2a2a3a] rounded-lg ring-1 ring-white/5 transition-colors"
+              className="max-sm:hidden p-2 bg-[#1e1e2e] hover:bg-[#2a2a3a] rounded-lg ring-1 ring-white/5 transition-colors"
               aria-label="Reset to default code"
             >
               <RotateCcwIcon className="size-4 text-gray-400" />

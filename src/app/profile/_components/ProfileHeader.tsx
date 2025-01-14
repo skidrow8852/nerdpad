@@ -85,7 +85,7 @@ function ProfileHeader({ userStats, userData, user }: ProfileHeaderProps) {
           <img
             src={user.imageUrl}
             alt="Profile"
-            className="w-24 h-24 rounded-full border-4 border-gray-800/50 relative z-10 group-hover:scale-105 transition-transform"
+            className="w-24 h-24 max-sm:h-auto rounded-full border-4 border-gray-800/50 relative z-10 group-hover:scale-105 transition-transform"
           />
           
             <div
@@ -98,7 +98,7 @@ function ProfileHeader({ userStats, userData, user }: ProfileHeaderProps) {
         </div>
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <h1 className="text-3xl font-bold text-white">{userData.name}</h1>
+            <h1 className="text-3xl max-sm:text-2xl font-bold text-white">{userData.name}</h1>
             
           </div>
           <p className="text-gray-400 flex items-center gap-2">
