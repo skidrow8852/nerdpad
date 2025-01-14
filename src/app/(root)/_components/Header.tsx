@@ -65,7 +65,7 @@ async function Header() {
         </div>
 
         <div className="flex items-center max-sm:flex-wrap gap-4">
-          <div className="flex items-center gap-3 max-sm:py-4">
+          <div className="flex items-center gap-3 max-sm:py-2">
             <ThemeSelector />
             <LanguageSelector  />
           </div>
