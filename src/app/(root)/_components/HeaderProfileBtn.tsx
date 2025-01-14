@@ -2,15 +2,14 @@
 import LoginButton from "@/components/LoginButton";
 import { SignedOut, UserButton } from "@clerk/nextjs";
 import { User } from "lucide-react";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 function HeaderProfileBtn() {
-  const router = useRouter();
+  const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if the screen is mobile
     const handleResize = () => {
       setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
@@ -23,7 +22,7 @@ function HeaderProfileBtn() {
     };
   }, []);
 
-  const isSnippetsRoute = router.pathname === "/snippets";
+  const isSnippetsRoute = pathname === "/snippets";
 
   return (
     <>
@@ -38,7 +37,6 @@ function HeaderProfileBtn() {
       </UserButton>
 
       <SignedOut>
-        {/* Hide LoginButton if on snippets route and on mobile */}
         {!isSnippetsRoute || !isMobile ? <LoginButton /> : null}
       </SignedOut>
     </>
