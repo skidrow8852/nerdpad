@@ -1,8 +1,13 @@
+import NavigationHeader from '@/components/NavigationHeader'
 import React from 'react'
 
 function page() {
   return (
-    <div className="bg-gray-900 text-white p-20" >
+    <div className="min-h-screen bg-[#0a0a0f]" >
+      <NavigationHeader />
+      <div className="max-w-7xl mx-auto px-4 py-12">
+
+      
         <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
       <p className="text-sm mb-2">Last updated: January 13, 2025</p>
       <p className="mb-4">
@@ -198,7 +203,7 @@ function page() {
       <ul className="list-disc pl-6 mb-4">
         <li>By email: support@nerdpad.pro</li>
       </ul>
-        
+        </div>
     </div>
   )
 }
