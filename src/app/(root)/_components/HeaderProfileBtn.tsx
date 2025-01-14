@@ -11,7 +11,7 @@ function HeaderProfileBtn() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 480px)").matches);
     };
 
     handleResize(); // Initial check
@@ -22,7 +22,7 @@ function HeaderProfileBtn() {
     };
   }, []);
 
-  const isSnippetsRoute = pathname === "/snippets";
+  const isSnippetsRoute = pathname.includes("/snippets");
 
   return (
     <>
