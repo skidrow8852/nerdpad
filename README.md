@@ -5,7 +5,7 @@
 A powerful, community-driven online code editor with a seamless, customizable, and multi-language experience.  
 
 
-## 🚀 Features  
+## Features  
 
 - **Tech Stack:** Built using Next.js 15, Convex, Clerk, and TypeScript for high performance and scalability.  
 - **Multi-Language Support:** Code in 10 different programming languages within a single platform.  
@@ -17,7 +17,7 @@ A powerful, community-driven online code editor with a seamless, customizable, a
 - **Font Size Controls:** Adjust font sizes for optimal readability and a personalized experience.  
 
 
-## 🛠️ Tech Stack  
+## Tech Stack  
 
 - **Frontend:** Next.js 15 with TypeScript and TailwindCSS
 - **Backend:** Convex  
