@@ -14,7 +14,9 @@ function Footer() {
             <span>Built for developers</span>
           </div>
           <div className="flex items-center gap-6">
-           
+            <Link href="/snippets" className="text-gray-400 hover:text-gray-300 transition-colors">
+              Snippets
+            </Link>
             <Link href="/privacy" className="text-gray-400 hover:text-gray-300 transition-colors">
               Privacy
             </Link>
