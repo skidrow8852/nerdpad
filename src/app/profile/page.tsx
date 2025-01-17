@@ -1,5 +1,4 @@
 "use client";
-export const dynamic = "force-dynamic";
 import { useUser } from "@clerk/nextjs";
 import { usePaginatedQuery, useQuery } from "convex/react";
 import { useRouter } from "next/navigation";
