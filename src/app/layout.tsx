@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nerd Pad - Share, Run, and Collaborate on Code Instantly",
     description: "Share, run, and collaborate on code snippets with ease using NerdPad. A platform built for developers and teams to quickly prototype and collaborate on code.",
-    url: "https://www.nerdpad.com", 
+    url: "https://nerdpad.pro", 
     siteName: "NerdPad",
   },
   twitter: {
