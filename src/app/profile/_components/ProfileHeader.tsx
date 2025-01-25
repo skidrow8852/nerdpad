@@ -88,12 +88,7 @@ function ProfileHeader({ userStats, userData, user }: ProfileHeaderProps) {
             className="w-24 h-24 max-sm:h-auto rounded-full border-4 border-gray-800/50 relative z-10 group-hover:scale-105 transition-transform"
           />
           
-            <div
-              className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-purple-600 p-2
-             rounded-full z-20 shadow-lg animate-pulse"
-            >
-              <Zap className="w-4 h-4 text-white" />
-            </div>
+           
           
         </div>
         <div>
